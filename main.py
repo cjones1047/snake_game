@@ -21,7 +21,11 @@ game_is_on = True
 while game_is_on:
     screen.update()
     time.sleep(0.1)
-    for segment in snake:
-        segment.forward(20)
+    for segment in range(len(snake) - 1, 0, -1):
+        new_x = snake[segment - 1].xcor()
+        new_y = snake[segment - 1].ycor()
+        snake[segment].goto(new_x, new_y)
+
+    snake[0].forward(20)
 
 screen.exitonclick()
