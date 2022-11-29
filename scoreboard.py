@@ -3,6 +3,7 @@ ALIGNMENT = "center"
 FONT = ("Courier", 24, "normal")
 TOP = 270
 
+
 class Scoreboard(Turtle):
 
     def __init__(self):
